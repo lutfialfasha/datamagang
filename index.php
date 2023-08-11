@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
     <title>Data Magang</title>
@@ -42,35 +42,35 @@
 
 </head>
 <body style="background: lavender;">
-<nav>
-     <ul>
-        <li><a href="index.html">Data Siswa Magang</a></li>
-         <li><a href="index2.html">Data Tempat Magang</a></li>
-        <li><a href="input.php">Tambah Data Siswa</a></li>
-        <li><a href="inputM.php">Tambah Data Tempat Magang</a></li>
-     </ul>
-</nav>
-<h3 align="center">DATA TEMPAT</h3>
+<?php include 'layouts/navbar.php' ; ?>
+<h3 align="center">DATA SISWA</h3>
 <center>
 <table border="1" align="center">
     <tr>
-        <th>ID TEMPAT</th>
-        <th>BLOK</th>
-        <th>LANTAI</th>
-        <th>BIDANG</th>
-        <th>BAGIAN</th> 
+        <th>ID</th>
+        <th>NAMA</th>
+        <th>ALAMAT</th>
+        <th>JENIS KELAMIN</th>
+        <th>SEKOLAH</th> 
         <th>JURUSAN</th>
+        <th>TEMPAT LAHIR</th>
+        <th>TANGGAL LAHIR</th>
+        <th>AWAL MAGANG</th>
+        <th>AKHIR MAGANG</th>
         <th>AKSI</th>   
     </tr>
 
-        <tr>
+        <!-- <tr>
             <td><?php echo $nomor++; ?></td>
+            <td><?php echo $data['id']; ?></td>
+            <td><?php echo $data['nama']; ?></td>
+            <td><?php echo $data['sekolah']; ?></td>
+            <td><?php echo $data['jurusan']; ?></td>
+            <td><?php echo $data['tempat_lahir']; ?></td>
+            <td><?php echo $data['tanggal_lahir']; ?></td>
+            <td><?php echo $data['tgl_awal_magang']; ?></td>
+            <td><?php echo $data['tgl_akhir_magang']; ?></td>
             <td><?php echo $data['id_tempat']; ?></td>
-            <td><?php echo $data['blok']; ?></td>
-            <td><?php echo $data['lantai']; ?></td>
-            <td><?php echo $data['bidang']; ?></td>
-            <td><?php echo $data['bagian']; ?></td>
-          
             <td>
                 <a href="inputm.php">Tambah data</a>
 
@@ -79,8 +79,7 @@
                 <a href="hapus.php?id_tempat=<?php echo $data['id_tempat'];?>">
                 Hapus</a>
             </td>
-        </tr>
-    
+        </tr> -->
 </table>
 
 <td align="center" colspan="5">
