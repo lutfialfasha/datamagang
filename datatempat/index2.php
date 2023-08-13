@@ -55,7 +55,7 @@
         <th>JURUSAN</th>
         <th>AKSI</th>   
     </tr>
-
+<!--
         <tr>
             <td><?php echo $nomor++; ?></td>
             <td><?php echo $data['id_tempat']; ?></td>
@@ -73,7 +73,7 @@
                 Hapus</a>
             </td>
         </tr>
-    
+-->
 </table>
 
 <td align="center" colspan="5">

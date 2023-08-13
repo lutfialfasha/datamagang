@@ -42,16 +42,7 @@
 
 </head>
 <body style="background: lavender;">
-<nav>
-     <ul>
-        <center>
-     	<li><a href="index.html">Data Siswa Magang</a></li>
-        <li><a href="index2.html">Data Tempat Magang</a></li>
-        <li><a href="input.php">Tambah Data Siswa</a></li>
-        <li><a href="inputm.php">Tambah Data Tempat Magang</a></li>
-    </center>
-     </ul>
-</nav>
+<?php include 'layouts/navbar.php' ; ?>
 <h3 align="center">INPUT DATA TEMPAT MAGANG</h3>
 <form action="prosesinputm.php" method="post">
     <center>
