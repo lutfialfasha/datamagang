@@ -42,7 +42,7 @@
 
 </head>
 <body style="background: lavender;">
-<?php include 'layouts/navbar.php' ; ?>
+<?php include '../layouts/navbar.php' ; ?>
 <h3 align="center">DATA TEMPAT</h3>
 <center>
 <table border="1" align="center">

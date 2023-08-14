@@ -42,14 +42,7 @@
 
 </head>
 <body style="background: lavender;">
-<nav>
-     <ul>
-        <li><a href="datasiswa/index.php">Data Siswa Magang</a></li>
-        <li><a href="datatempat/index2.php">Data Tempat Magang</a></li>
-        <li><a href="datasiswa/input.php">Tambah Data Siswa</a></li>
-        <li><a href="datatempat/inputM.php">Tambah Data Tempat Magang</a></li>
-     </ul>
-</nav>
+<?php include 'layouts/navbar.php'; ?>
 <h3 align="center">SELAMAT DATANG</h3>
 </td>
 </body>
