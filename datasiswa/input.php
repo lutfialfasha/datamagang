@@ -42,7 +42,7 @@
 
 </head>
 <body style="background: lavender;">
-<?php include 'layouts/navbar.php' ; ?>
+<?php include 'layouts/navbar.php';?>
 <h3 align="center">INPUT DATA SISWA</h3>
 <form action="prosesinput.php" method="post">
     <center>

@@ -59,8 +59,8 @@
         <th>AKHIR MAGANG</th>
         <th>AKSI</th>   
     </tr>
-
-        <!-- <tr>
+<!--
+         <tr>
             <td><?php echo $nomor++; ?></td>
             <td><?php echo $data['id']; ?></td>
             <td><?php echo $data['nama']; ?></td>
