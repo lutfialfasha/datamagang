@@ -7,76 +7,120 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Data Magang</title>
 </head>
+
+
 <body style="background: lavender;">
 <?php include '../layouts/navbar.php';?>
-<h3 align="center">INPUT DATA SISWA</h3>
-<form action="prosesinput.php" method="post">
-    <center>
-    <table border="0" align="center">
-        <tr>
-            <td>Id  </td>
-            <td><input type="text" name="id"></td>
-        </tr>
-        <tr>
-            <td>Nama </td>
-            <td><input type="text" name="nama"></td>
-        </tr>
-        <tr>
-            <td>Jenis Kelamin</td>
-            <td><input type="text" name="jenkel"></td>
-        </tr>
-        <tr>
-            <td>Sekolah</td>
-            <td><input type="text" name="sekolah"></td>
-        </tr>
-        <tr>
-            <td>Jurusan</td>
-            <td><input type="text" name="Jurusan"></td>
-        </tr>
-        <tr>
-            <td>tempat Lahir</td>
-            <td><input type="text" name="tempat_lahir"></td>
-        </tr>
-        <tr>
-            <td>Tanggal Lahir</td>
-            <td><input type="date" name="tanggal_lahir"></td>
-        </tr>
-        <tr>
-            <td>Tanggal Awal Magang</td>
-            <td><input type="date" name="awal"></td>
-        </tr>
-        <tr>
-            <td>Tanggal Selesai Magang</td>
-            <td><input type="date" name="akhir"></td>
-        </tr>
-        <tr>
-            <td>Tempat</td>
-            <td>
-                <select name="tempat">
-                    <option>--Pilih--</option>
-                    <?php
-                    
-                    include "koneksi.php";
-                    $jurusan="select * from tb_user";
-                    $sql_jurusan=mysqli_query($koneksi,$jurusan);
-                    while ($data_jurusan=mysqli_fetch_array($sql_jurusan)){
-                    $i++;
-                    ?>
-                    <option value="<?php echo $data_jurusan['tb_user'];?>">
-                        <?php echo $data_jurusan['tempat'];?>
-                    </option>
-                    <?php
-                }
-                    ?>             
+
+<div class="container">
+<div class="card text-center">
+<div class="card-header">
+   <h3>Tambah Data Siswa</h3>
+  </div>
+
+  <div class="card text-center">
+  <div class="card-body">
+ 
+  <form>
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label">ID</label>
+    <div class="col-sm-5">
+    <input type="number" id ="id" name="id" class="form-control" id="id">
+  </div>
+  </div>
+
+<br>
+
+  <div class="form-group row">
+    <label for="nama" class="col-sm-2 col-form-label">NAMA</label>
+    <div class="col-sm-5">
+    <input type="text" id ="nama" name="nama" class="form-control" placeholder="Nama Lengkap" aria-label="Nama Lengkap" id="nama">
+  </div>
+  </div>
+
+<br>
+
+  <div class="form-group row">
+    <label for="alamat" class="col-sm-2 col-form-label">ALAMAT</label>
+    <div class="col-sm-5">
+    <input type="text" id ="alamat" name="alamat" class="form-control" placeholder="Alamat" aria-label="Alamat" id="alamat">
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label  class="col-sm-2 col-form-label">JENIS KELAMIN</label>
+    <div class="col-sm-5">
+    <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1">Laki Laki</label>
+  
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="option1">
+  <label class="form-check-label" for="inlineRadio1"> Perempuan</label>
+  </div>
+  </div>
+  </div>
+  </div>
+
+ <br>
+
+<div class="form-group row">
+    <label for="sekolah" class="col-sm-2 col-form-label">SEKOLAH</label>
+    <div class="col-sm-5">
+    <input type="text" id ="sekolah" name="sekolah" class="form-control" placeholder="Asal Sekolah" aria-label="Asal Sekolah" id="sekolah">
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+     <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
+     <div class="col-sm-1">
+                <select type="select" id="jurusan" name="jurusan">
+                    <option>Pilih</option>
+                    <option>RPL</option>
+                    <option>DKV</option>
+                    <option>Multi Media</option>
             </select>
-        </td>
-    </center>
-        </tr>
-        <tr>
-            <td><input type="submit" value="SIMPAN"></td>
-            <td><input type="button" value="KEMBALI" onclick="history.go(-1);"></td>
-        </tr>
-    </table>
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="tempat" class="col-sm-2 col-form-label">TEMPAT LAHIR</label>
+    <div class="col-sm-5">
+    <input type="text" id ="tempat" name="tempat" class="form-control" placeholder="Asal Tempat" aria-label="Asal Tempat" id="lahir">
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="awal" class="col-sm-2 col-form-label">AWAL MAGANG</label>
+    <div class="col-sm-5">
+    <input type="date" id ="awal" name="awal" class="form-control"id="awal">
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="akhir" class="col-sm-2 col-form-label">AKHIR MAGANG</label>
+    <div class="col-sm-5">
+    <input type="date" id ="akhir" name="akhir" class="form-control"id="akhir">
+  </div>
+  </div>
+
 </form>
+  </div>
+
+  <div class="card-footer">
+  <button type="button" class="btn btn-primary">Simpan</button>
+  <button type="button" class="btn btn-danger" onclick="history.go(-1);">Kembali</button>
+  </div>
+
 </body>
 </html>
