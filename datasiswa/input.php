@@ -21,11 +21,11 @@
   <div class="card text-center">
   <div class="card-body">
  
-  <form>
+  <form action="prosesinput.php" method="post">
   <div class="form-group row">
     <label for="id" class="col-sm-2 col-form-label">ID</label>
     <div class="col-sm-5">
-    <input type="number" id ="id" name="id" class="form-control" id="id">
+    <input type="number" id ="id" name="id" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
   </div>
   </div>
 
@@ -78,7 +78,7 @@
   <div class="form-group row">
      <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
      <div class="col-sm-1">
-                <select type="select" id="jurusan" name="jurusan">
+                <select type="select" id="jurusan" name="jurusan" class="form-control">
                     <option>Pilih</option>
                     <option>RPL</option>
                     <option>DKV</option>
@@ -114,13 +114,11 @@
   </div>
   </div>
 
-</form>
   </div>
-
   <div class="card-footer">
-  <button type="button" class="btn btn-primary">Simpan</button>
-  <button type="button" class="btn btn-danger" onclick="history.go(-1);">Kembali</button>
+  <button type="submit" value="submit" class="btn btn-primary">Simpan</button>
+  <input type="reset" class="btn btn-danger"></input>
   </div>
-
+</form>
 </body>
 </html>
