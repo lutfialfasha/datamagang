@@ -9,8 +9,10 @@
 </head>
 <body style="background: lavender;">
 <?php include '../layouts/navbar.php' ; ?>
+<div class="container">
 <h3 align="center">DATA SISWA</h3>
-    <h3 align="right"><a href="input.php">Tambah data</a> </h3>
+
+    <h5 align="right"><a href="input.php">Tambah data</a> </h5>
     <center>
     <table class="table table-striped" border="1" style="background-color: rgba (255,255,255,0.5">
         <th>ID</th>
