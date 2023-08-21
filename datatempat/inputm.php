@@ -71,6 +71,7 @@
 <div class="card-footer">
   <button type="submit" value="submit" class="btn btn-primary">Simpan</button>
   <input type="reset" class="btn btn-danger"></input>
+  <button type="button" value="kembali" onclick="history.go(-1)" class="btn btn-warning">kembali</button>
   </div>
 </form>
 </body>

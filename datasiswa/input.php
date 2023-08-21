@@ -77,7 +77,7 @@
 
   <div class="form-group row">
      <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
-     <div class="col-sm-1">
+     <div class="col-sm-5">
                 <select type="select" id="jurusan" name="jurusan" class="form-control">
                     <option>Pilih</option>
                     <option>RPL</option>
@@ -93,6 +93,15 @@
     <label for="tempat" class="col-sm-2 col-form-label">TEMPAT LAHIR</label>
     <div class="col-sm-5">
     <input type="text" id ="tempat" name="tempat" class="form-control" placeholder="Asal Tempat" aria-label="Asal Tempat" id="lahir">
+  </div>
+  </div>
+
+  <br>
+
+  <div class="form-group row">
+    <label for="tgl" class="col-sm-2 col-form-label">TANGGAL LAHIR</label>
+    <div class="col-sm-5">
+    <input type="date" id ="tgl" name="tgl" class="form-control"id="tgl">
   </div>
   </div>
 
