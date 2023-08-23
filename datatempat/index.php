@@ -9,6 +9,7 @@
 </head>
 <body style="background: lavender;">
 <?php include '../layouts/navbar.php' ; ?>
+<?php include '../config/db_config.php' ; ?>
 
 <div class="container">
 <div class="card text-center">
