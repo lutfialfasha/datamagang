@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-   $baseUrl = 'http://localhost:8888/datamagang/' 
+   $baseUrl = 'http://localhost/datamagang/' 
 ?>
 
 <head>	
