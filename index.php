@@ -8,6 +8,9 @@
     <title>Data Magang</title>
 </head>
 <body style="background: lavender;">
+<?php
+   $baseUrl = 'http://localhost/datamagang/' 
+?>
 <?php include 'layouts/navbar.php'; ?>
 <h3 align="center">SELAMAT DATANG</h3>
 </td>
