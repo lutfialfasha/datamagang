@@ -9,7 +9,11 @@
 </head>
 <body style="background: lavender;">
 <?php include '../layouts/navbar.php' ; ?>
+
 <div class="container">
+<div class="card text-center">
+<div class="card-header">
+    
 <h3 align="center">DATA TEMPAT</h3>
 
 <center>
@@ -25,7 +29,7 @@
            
     </tr>
   
-
+<!--
         <tr>
             <td><?php echo $nomor=""; ?></td>
             <td><?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: ''; ?></td>
@@ -41,7 +45,7 @@
                 Hapus</a>
             </td>
         </tr>
-
+-->
 </table>
 
 <td align="center" colspan="5">

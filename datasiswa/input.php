@@ -53,11 +53,11 @@
     <label  class="col-sm-2 col-form-label">JENIS KELAMIN</label>
     <div class="col-sm-5">
     <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="option1">
+  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="laki laki">
   <label class="form-check-label" for="inlineRadio1">Laki Laki</label>
   
   <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="option1">
+  <input class="form-check-input" type="radio" name="jenkel" id="inlineRadio1" value="perempuan">
   <label class="form-check-label" for="inlineRadio1"> Perempuan</label>
   </div>
   </div>

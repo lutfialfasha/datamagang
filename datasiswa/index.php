@@ -9,7 +9,10 @@
 </head>
 <body style="background: lavender;">
 <?php include '../layouts/navbar.php' ; ?>
+
 <div class="container">
+<div class="card text-center">
+<div class="card-header">
 
 
 <h3 align="center">DATA SISWA</h3>
@@ -21,43 +24,36 @@
         <th>ID</th>
         <th>NAMA</th>
         <th>ALAMAT</th>
-        <th>JENIS KELAMIN</th>
         <th>SEKOLAH</th> 
         <th>JURUSAN</th>
         <th>TEMPAT LAHIR</th>
-        <th>TANGGAL LAHIR</th>
         <th>AWAL MAGANG</th>
         <th>AKHIR MAGANG</th>
           
         
     </tr>
-
+<!--
     <tr>
 
     <td><?php echo $nomor=""; ?></td>
             <td><?php echo $data=isset($row['id']) ?$row['id']: ''; ?></td>
             <td><?php echo $data=isset($row['nama']) ?$row['nama']: ''; ?></td>
             <td><?php echo $data=isset($row['alamat']) ?$row['alamat']: '';?></td>
-            <td><?php echo $data=isset($row['jenkel']) ?$row['jenkel']: '';?></td>
             <td><?php echo $data=isset($row['sekolah']) ?$row['sekolah']: '';?></td>
             <td><?php echo $data=isset($row['jurusan']) ?$row['jurusan']: '';?></td>
             <td><?php echo $data=isset($row['tempat_lahir']) ?$row['tempat_lahir']: '';?></td>
-            <td><?php echo $data=isset($row['tanggal_lahir']) ?$row['tanggal_lahir']: '';?></td>
             <td><?php echo $data=isset($row['awal_magang']) ?$row['awal_magang']: '';?></td>
             <td><?php echo $data=isset($row['akhir_magang']) ?$row['akhir_magang']: '';?></td>
-            <td><?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: '';?></td>
+            <td><?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: '';?></td>         
             <td>
-            <td>
-                <a href="edit.php?id_tempat=<?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: '';?>">
+                <a href="edit.php?id=<?php echo $data=isset($row['id']) ?$row['id']: '';?>">
                 Ubah</a> 
-                <a href="hapus.php?id_tempat=<?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: ''?>">
+                <a href="hapus.php?id=<?php echo $data=isset($row['id']) ?$row['id']: ''?>">
                 Hapus</a>
             </td>
-            </td>
-
 
     </tr>
-      
+-->
 </table>
 
 <td align="center" colspan="5">
