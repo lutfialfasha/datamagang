@@ -10,6 +10,6 @@ $hasil = mysqli_query($conn,$tambah);
 	if ($hasil === false):
 	echo "<script>alert('Gagal Disimpan!!');location.href='inputm.php';</script>";
 else :
-	echo "<script>alert('Berhssil Disimpan!!');location.href='index.php';</script>";
+	echo "<script>alert('Berhasil Disimpan!!');location.href='index.php';</script>";
 endif;  
 ?>
