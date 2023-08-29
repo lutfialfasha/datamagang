@@ -15,7 +15,7 @@
 <?php
     include "../config/db_config.php";
     $a = $_GET['id_tempat'];
-    $data_tempat = "select * from tb_tempat";
+    $data_tempat = "select * from tb_tempat where tb_tempat.id_tempat = '$a';";
     $sql = mysqli_query($conn,$data_tempat);
     while ($data = mysqli_fetch_array($sql)){
     ?>
