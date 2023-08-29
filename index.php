@@ -1,4 +1,3 @@
-
 <?php include 'layouts/navbar.php'; ?>
 <div class="container mt-4">
     <div class="card">
