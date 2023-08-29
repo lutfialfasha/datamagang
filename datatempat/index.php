@@ -26,7 +26,7 @@
            
     </tr>
   
-<!--
+
         <tr>
             <td><?php echo $nomor=""; ?></td>
             <td><?php echo $data=isset($row['id_tempat']) ?$row['id_tempat']: ''; ?></td>
@@ -42,7 +42,7 @@
                 Hapus</a>
             </td>
         </tr>
--->
+
 </table>
 
 <td align="center" colspan="5">

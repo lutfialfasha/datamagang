@@ -18,11 +18,11 @@
   <div class="card-body">
 
 
-<form action="prosesinputm.php" method="post">
+<form action="proses.php" method="post">
 <div class="form-group row">
     <label for="id" class="col-sm-2 col-form-label">ID TEMPAT</label>
     <div class="col-sm-5">
-    <input type="number" id ="id" name="id" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
+    <input type="number" id ="id" name="id_tempat" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
   </div>
   </div>
 
@@ -31,7 +31,7 @@
 <div class="form-group row">
     <label for="blok" class="col-sm-2 col-form-label">BLOK</label>
     <div class="col-sm-5">
-    <input type="number" id ="blok" name="blok" class="form-control" placeholder="Blok" aria-label="Blok" id="blok">
+    <input type="text" id ="blok" name="blok" class="form-control" placeholder="Blok" aria-label="Blok" id="blok">
   </div>
   </div>
 
