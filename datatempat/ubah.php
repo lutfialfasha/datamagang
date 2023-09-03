@@ -39,7 +39,7 @@
     <label for="blok" class="col-sm-2 col-form-label">BLOK</label>
     <div class="col-sm-5">
                 <select type="select" id="blok" name="blok" value="<?php echo $data['blok'] ?>" class="form-control">
-                    <option>Pilih</option>
+             
                     <option>A</option>
                     <option>B</option>
                     <option>C</option>
@@ -66,7 +66,7 @@
     <label for="bidang" class="col-sm-2 col-form-label">BIDANG</label>
     <div class="col-sm-5">
                 <select type="select" id="bidang" name="bidang" value="<?php echo $data['bidang'] ?>" class="form-control">
-                    <option>Pilih</option>
+
                     <option>Diskominfo</option>
                     <option>BKD</option>
                     <option>Grafis</option>

@@ -15,14 +15,14 @@
 
 <center>
 <h5 align="right"><a href="inputm.php">Tambah data</a> </h5>
-<table <table class="table table-striped" border="1" style="background-color: rgba (255,255,255,0.5">
+<table <table class="table table-bordered" border="1" style="background-color: rgba (255,255,255,0.5">
     <tr>
-        <th>| NO |</th> 
-        <th>| ID TEMPAT |</th> 
-        <th>| BLOK |</th>
-        <th>| LANTAI |</th>
-        <th>| BIDANG |</th>
-        <th>| BAGIAN |</th> 
+        <th> NO </th> 
+        <th> ID TEMPAT </th> 
+        <th> BLOK </th>
+        <th> LANTAI </th>
+        <th> BIDANG </th>
+        <th> BAGIAN </th> 
         <th>AKSI</th>
     </tr>
     <?php
