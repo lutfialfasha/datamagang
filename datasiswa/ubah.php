@@ -11,18 +11,26 @@
 <div class="container">
 <div class="card text-center">
 <div class="card-header">
-   <h3>Tambah Data Siswa</h3>
+   <h3>Ubah Data Siswa</h3>
+   <?php
+    include "../config/db_config.php";
+    $a = $_GET['id'];
+    $data_tempat = "select * from tb_user where tb_user.id_user = '$a';";
+    $sql = mysqli_query($conn,$data_tempat);
+    while ($data = mysqli_fetch_array($sql)){
+    ?>
+  </div>
   </div>
 
   <div class="card text-center">
   <div class="card-body">
  
-  <form action="proses.php" method="post">
+  <form action="proses_ubah.php" method="post">
 
   <div class="form-group row">
     <label for="id_tempat" class="col-sm-2 col-form-label">Id Tempat Magang</label>
     <div class="col-sm-5">
-    <select name="id_tempat"  class="form-control">
+    <select name="id_tempat" value="<?php echo $data['id_tempat'] ?>" class="form-control">
                     <option>Pilih Id Magang</option>
                     <?php
                     include "../config/db_config.php";
@@ -46,7 +54,7 @@
   <div class="form-group row">
     <label for="id" class="col-sm-2 col-form-label">ID</label>
     <div class="col-sm-5">
-    <input type="number" id ="id" name="id" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
+    <input type="number" id ="id" name="id" value="<?php echo $data['id_user'] ?>" readonly="" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
   </div>
   </div>
 
@@ -55,7 +63,7 @@
   <div class="form-group row">
     <label for="nama" class="col-sm-2 col-form-label">NAMA</label>
     <div class="col-sm-5">
-    <input type="text" id ="nama" name="nama" class="form-control" placeholder="Nama Lengkap" aria-label="Nama Lengkap" id="nama">
+    <input type="text" id ="nama" name="nama" value="<?php echo $data['nama'] ?>" class="form-control" placeholder="Nama Lengkap" aria-label="Nama Lengkap" id="nama">
   </div>
   </div>
 
@@ -81,7 +89,7 @@
 <div class="form-group row">
     <label for="sekolah" class="col-sm-2 col-form-label">SEKOLAH</label>
     <div class="col-sm-5">
-    <input type="text" id ="sekolah" name="sekolah" class="form-control" placeholder="Asal Sekolah" aria-label="Asal Sekolah" id="sekolah">
+    <input type="text" id ="sekolah" name="sekolah" value="<?php echo $data['sekolah'] ?>" class="form-control" placeholder="Asal Sekolah" aria-label="Asal Sekolah" id="sekolah">
   </div>
   </div>
 
@@ -90,7 +98,7 @@
   <div class="form-group row">
      <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
      <div class="col-sm-5">
-                <select type="select" id="jurusan" name="jurusan" class="form-control">
+                <select type="select" id="jurusan" name="jurusan" value="<?php echo $data['jurusan'] ?>" class="form-control">
                     <option>Pilih</option>
                     <option>RPL</option>
                     <option>DKV</option>
@@ -104,7 +112,7 @@
   <div class="form-group row">
     <label for="tempat" class="col-sm-2 col-form-label">TEMPAT LAHIR</label>
     <div class="col-sm-5">
-    <input type="text" id ="tempat" name="tempat" class="form-control" placeholder="Asal Tempat" aria-label="Asal Tempat" id="lahir">
+    <input type="text" id ="tempat" name="tempat" value="<?php echo $data['tempat_lahir'] ?>" class="form-control" id="lahir">
   </div>
   </div>
 
@@ -113,7 +121,7 @@
   <div class="form-group row">
     <label for="awal" class="col-sm-2 col-form-label">AWAL MAGANG</label>
     <div class="col-sm-5">
-    <input type="date" id ="awal" name="awal" class="form-control" id="awal">
+    <input type="date" id ="awal" name="awal" value="<?php echo $data['awal_magang'] ?>" class="form-control" id="awal">
   </div>
   </div>
 
@@ -122,7 +130,7 @@
   <div class="form-group row">
     <label for="akhir" class="col-sm-2 col-form-label">AKHIR MAGANG</label>
     <div class="col-sm-5">
-    <input type="date" id ="akhir" name="akhir" class="form-control" id="akhir">
+    <input type="date" id ="akhir" name="akhir" value="<?php echo $data['akhir_magang'] ?>" class="form-control" id="akhir">
   </div>
   </div>
 
@@ -133,4 +141,7 @@
   <button type="button" value="kembali" onclick="history.go(-1)" class="btn btn-warning">kembali</button>
   </div>
 </form>
+<?php
+    }
+?>
 <?php include '../layouts/footer.php'; ?>

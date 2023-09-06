@@ -56,7 +56,7 @@
             <td><?php echo $data['id_tempat'];?></td>
                
             <td>
-                <a href="edit.php?id=<?php echo $data['id_user'];?>">
+                <a href="Ubah.php?id=<?php echo $data['id_user'];?>">
                 Ubah</a> 
                 <a href="hapus.php?id=<?php echo $data['id_user'];?>">
                 Hapus</a>
