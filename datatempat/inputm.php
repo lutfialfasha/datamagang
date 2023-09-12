@@ -31,16 +31,8 @@
 <div class="form-group row">
     <label for="blok" class="col-sm-2 col-form-label">BLOK</label>
     <div class="col-sm-5">
-                <select type="select" id="blok" name="blok" class="form-control">
-                    <option>Pilih</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>D</option>
-                    <option>E</option>
-                    <option>F</option>
-                    <option>G</option>
-            </select>
+    <input type="text" id ="blok" name="blok" class="form-control" placeholder="Masukan Blok" aria-label="Masukan Blok" id="blok">
+
   </div>
   </div>
 
@@ -58,12 +50,9 @@
 <div class="form-group row">
     <label for="bidang" class="col-sm-2 col-form-label">BIDANG</label>
     <div class="col-sm-5">
-                <select type="select" id="bidang" name="bidang" class="form-control">
-                    <option>Pilih</option>
-                    <option>Diskominfo</option>
-                    <option>BKD</option>
-                    <option>Grafis</option>
-            </select>
+    <input type="text" id ="bidang" name="bidang" class="form-control" placeholder="Bidang" aria-label="Bidang" id="bidang">
+         
+           
     </div>
   </div>
 

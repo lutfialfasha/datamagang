@@ -12,7 +12,7 @@ $id_tempat = $_POST['id_tempat'];
 $ubah = "update tb_user set nama = '$nama', jenis_kelamin = '$jenis_kelamin', sekolah = '$sekolah', jurusan = '$jurusan', tempat_lahir = '$tempat', awal_magang = '$awal', akhir_magang = '$akhir', id_tempat = '$id_tempat' where tb_user.id_user = '$id'; ";
 $hasil=mysqli_query($conn,$ubah);
 if ($hasil === false):
-	
+	echo "<script>alert('Gagal Diubah!!');location.href='index.php';</script>";
 else :
 	echo "<script>alert('Berhasil Diubah!!');location.href='index.php';</script>";
 endif;  

@@ -9,7 +9,7 @@ $tempat = $_POST['tempat'];
 $awal = $_POST['awal'];
 $akhir = $_POST['akhir'];
 $id_tempat = $_POST['id_tempat'];
-$tambah = "INSERT INTO tb_user (id_user, nama, jenis_kelamin, sekolah, jurusan, tempat_lahir, awal_magang, akhir_magang, id_tempat) VALUES ('$id','$nama','$jenis_kelamin','$sekolah','$jurusan','$tempat','$awal','$akhir','$id_tempat');";
+$tambah = "insert into tb_user (id_user, nama, jenis_kelamin, sekolah, jurusan, tempat_lahir, awal_magang, akhir_magang, id_tempat) values ('$id','$nama','$jenis_kelamin','$sekolah','$jurusan','$tempat','$awal','$akhir','$id_tempat');";
 $hasil = mysqli_query($conn,$tambah);
 if ($hasil === false):
 	echo "<script>alert('Gagal Disimpan!!');location.href='index.php';</script>";  

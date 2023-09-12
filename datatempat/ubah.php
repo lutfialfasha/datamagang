@@ -38,16 +38,8 @@
 <div class="form-group row">
     <label for="blok" class="col-sm-2 col-form-label">BLOK</label>
     <div class="col-sm-5">
-                <select type="select" id="blok" name="blok" value="<?php echo $data['blok'] ?>" class="form-control">
-             
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>D</option>
-                    <option>E</option>
-                    <option>F</option>
-                    <option>G</option>
-            </select>
+    <input type="text" id ="blok" name="blok" class="form-control" value="<?php echo $data['blok'] ?>"  id="blok">
+
     </div>
   </div>
 
@@ -65,12 +57,8 @@
 <div class="form-group row">
     <label for="bidang" class="col-sm-2 col-form-label">BIDANG</label>
     <div class="col-sm-5">
-                <select type="select" id="bidang" name="bidang" value="<?php echo $data['bidang'] ?>" class="form-control">
+    <input type="text" id ="bidang" name="bidang" value="<?php echo $data['bidang'] ?>" class="form-control">
 
-                    <option>Diskominfo</option>
-                    <option>BKD</option>
-                    <option>Grafis</option>
-            </select>
     </div>
   </div>
 

@@ -31,7 +31,6 @@
     <label for="id_tempat" class="col-sm-2 col-form-label">Id Tempat Magang</label>
     <div class="col-sm-5">
     <select name="id_tempat" value="<?php echo $data['id_tempat'] ?>" class="form-control">
-                    <option>Pilih Id Magang</option>
                     <?php
                     include "../config/db_config.php";
                     $id="select * from tb_tempat";
@@ -73,11 +72,11 @@
     <label  class="col-sm-2 col-form-label">JENIS KELAMIN</label>
     <div class="col-sm-5">
     <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="laki laki">
+  <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="laki laki" <?php echo ($data['jenis_kelamin'] == "laki laki")?"checked":""?>>
   <label class="form-check-label" for="inlineRadio1">Laki Laki</label>
   
   <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="perempuan">
+  <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="perempuan" <?php echo ($data['jenis_kelamin'] == "perempuan")?"checked":""?>>
   <label class="form-check-label" for="inlineRadio1"> Perempuan</label>
   </div>
   </div>
@@ -98,12 +97,7 @@
   <div class="form-group row">
      <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
      <div class="col-sm-5">
-                <select type="select" id="jurusan" name="jurusan" value="<?php echo $data['jurusan'] ?>" class="form-control">
-                    <option>Pilih</option>
-                    <option>RPL</option>
-                    <option>DKV</option>
-                    <option>Multi Media</option>
-            </select>
+     <input type="text" id ="jurusan" name="jurusan" value="<?php echo $data['jurusan'] ?>" class="form-control" placeholder="Masukann Jurusan" aria-label="Masukan Jurusan" id="jurusan">           
   </div>
   </div>
 

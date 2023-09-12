@@ -23,7 +23,7 @@
     <label for="id_tempat" class="col-sm-2 col-form-label">Id Tempat Magang</label>
     <div class="col-sm-5">
     <select name="id_tempat"  class="form-control">
-                    <option>Pilih Id Magang</option>
+                    
                     <?php
                     include "../config/db_config.php";
                     $id="select * from tb_tempat";
@@ -90,12 +90,7 @@
   <div class="form-group row">
      <label for="jurusan" class="col-sm-2 col-form-label">JURUSAN</label>
      <div class="col-sm-5">
-                <select type="select" id="jurusan" name="jurusan" class="form-control">
-                    <option>Pilih</option>
-                    <option>RPL</option>
-                    <option>DKV</option>
-                    <option>Multi Media</option>
-            </select>
+     <input type="text" id ="jurusan" name="jurusan" class="form-control" placeholder="Masukan Jurusan" aria-label="Masukan Jurusan" id="jurusan">
   </div>
   </div>
 

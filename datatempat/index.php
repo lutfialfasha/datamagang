@@ -14,7 +14,7 @@
 <h3 align="center">DATA TEMPAT</h3>
 
 <center>
-<h5 align="right"><a href="inputm.php">Tambah data</a> </h5>
+<h5 align="right"><a class="btn btn-success" href="inputm.php">Tambah data</a> </h5>
 <table <table class="table table-bordered" border="1" style="background-color: rgba (255,255,255,0.5">
     <tr>
         <th> NO </th> 
@@ -25,9 +25,16 @@
         <th> BAGIAN </th> 
         <th>AKSI</th>
     </tr>
-    <?php
-    include "../config/db_config.php";
+    
+    <?php 
+include "../config/db_config.php";
+if(isset($_GET['cari'])){
+    $pencarian = $_GET['cari'];
+    $data_siswa = "select * from  tb_tempat where id_tempat like '%".$pencarian."%' or blok like '%".$pencarian."%' or lantai like '%".$pencarian."%'
+    or bidang like '%".$pencarian."%' or bagian like '%".$pencarian."%'" ;
+}   else {
     $data_siswa="select * from tb_tempat";
+}
     $sql=mysqli_query($conn,$data_siswa);
     $nomor = 1;
         while($data = mysqli_fetch_array($sql)){
@@ -41,9 +48,9 @@
             <td><?php echo $data['bidang']; ?></td>
             <td><?php echo $data['bagian']; ?></td>
             <td>
-            <a href="ubah.php?id_tempat=<?php echo $data['id_tempat'];?>">
-                Ubah</a> |
-                <a href="hapus.php?id_tempat=<?php echo $data['id_tempat'];?>">
+            <a  class="btn btn-primary" href="ubah.php?id_tempat=<?php echo $data['id_tempat'];?>">
+                Ubah</a> 
+                <a class="btn btn-danger" href="hapus.php?id_tempat=<?php echo $data['id_tempat'];?>">
                 Hapus</a>
             </td>
         </tr>
@@ -52,8 +59,24 @@
         ?>
 </table>
 
+<form method="GET" action="index.php" style="text-align center;">
+
+<div class="form-group row">
+<label for="cari"  class="col-sm-1 col-form-label">Pencarian</label>
+<div class="col-sm-4">
+<input type="text" id ="cari" name="cari" value="<?php if(isset($_GET['cari'])){ echo $_GET['cari'];} ?>">
+
+<button class="btn btn-success me-md-2" type="submit">Cari</button>
+
+</div>
+</div>
+</div>
+
+</form>
+
+<div class="card-footer">
 <td align="center" colspan="5">
-<a href="logout.php">KELUAR</a>
+<a class="btn btn-dark" href="logout.php">KELUAR</a>
 </tr>
 </td>
 </center>
