@@ -14,7 +14,22 @@
 <h3 align="center">DATA TEMPAT</h3>
 
 <center>
-<h5 align="right"><a class="btn btn-success" href="inputm.php">Tambah data</a> </h5>
+<h5 align="left"><a class="btn btn-success" href="inputm.php">Tambah data</a> </h5>
+<form method="GET" action="index.php" style="text-align center;">
+
+<div class="form-group row">
+<label for="cari"  class="col-sm-1 col-form-label">Pencarian</label>
+<div class="col-sm-4">
+<input type="text" id ="cari" name="cari" value="<?php if(isset($_GET['cari'])){ echo $_GET['cari'];} ?>">
+
+<button class="btn btn-success me-md-2" type="submit">Cari</button>
+
+</div>
+</div>
+</div>
+
+</form>
+
 <table <table class="table table-bordered" border="1" style="background-color: rgba (255,255,255,0.5">
     <tr>
         <th> NO </th> 
@@ -27,6 +42,7 @@
     </tr>
     
     <?php 
+include "../login/ceksession.php";
 include "../config/db_config.php";
 if(isset($_GET['cari'])){
     $pencarian = $_GET['cari'];
@@ -58,25 +74,9 @@ if(isset($_GET['cari'])){
     }
         ?>
 </table>
-
-<form method="GET" action="index.php" style="text-align center;">
-
-<div class="form-group row">
-<label for="cari"  class="col-sm-1 col-form-label">Pencarian</label>
-<div class="col-sm-4">
-<input type="text" id ="cari" name="cari" value="<?php if(isset($_GET['cari'])){ echo $_GET['cari'];} ?>">
-
-<button class="btn btn-success me-md-2" type="submit">Cari</button>
-
-</div>
-</div>
-</div>
-
-</form>
-
 <div class="card-footer">
 <td align="center" colspan="5">
-<a class="btn btn-dark" href="logout.php">KELUAR</a>
+<a class="btn btn-dark" href="../login/logout.php">KELUAR</a>
 </tr>
 </td>
 </center>

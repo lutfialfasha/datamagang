@@ -39,7 +39,7 @@
                     $i++;
                     ?>
                     <option value="<?php echo $data_jurusan['id_tempat'];?>">
-                        <?php echo $data_jurusan['id_tempat'];?>
+                        <?php echo $data_jurusan['bidang'];?> - <?php echo $data_jurusan['bagian'];?>
                     </option>
                     <?php
                 }

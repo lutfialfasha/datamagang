@@ -36,12 +36,6 @@
 					<li class="nav-item">
 				<a  class="nav-link active"  href="<?= $baseUrl?>datatempat/index.php">Data Tempat Magang</a>
 					</li>
-					<li class="nav-item">
-				<a class="nav-link active" href="<?= $baseUrl?>datasiswa/input.php">Tambah Data Siswa</a>
-					</li>
-				<li class="nav-item">
-				<a class="nav-link active" href="<?= $baseUrl?>datatempat/inputm.php">Tambah Data Tempat</a>
-					</li>
 				</ul>
 			</div>
 		</div>
