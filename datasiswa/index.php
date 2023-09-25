@@ -82,7 +82,7 @@ if(isset($_GET['cari'])){
             <td>
                 <a class="btn btn-primary" href="Ubah.php?id=<?php echo $data['id_user'];?>">
                 Ubah</a> 
-                <a class="btn btn-danger" href="hapus.php?id=<?php echo $data['id_user'];?>">
+                <a onclick= "return confirm('Yakin Untuk Menghapus ? ')"class="btn btn-danger" href="hapus.php?id_user=<?php echo $data['id_user'];?>">
                 Hapus</a>
             </td>
 

@@ -66,7 +66,7 @@ if(isset($_GET['cari'])){
             <td>
             <a  class="btn btn-primary" href="ubah.php?id_tempat=<?php echo $data['id_tempat'];?>">
                 Ubah</a> 
-                <a class="btn btn-danger" href="hapus.php?id_tempat=<?php echo $data['id_tempat'];?>">
+            <a onclick="return confirm('Yakin Untuk Menghapus ?')" class="btn btn-danger" href="hapus.php?id_tempat=<?php echo $data['id_tempat'];?>">
                 Hapus</a>
             </td>
         </tr>
