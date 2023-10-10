@@ -15,6 +15,7 @@
 
 <center>
 <h5 align="left"><a class="btn btn-success" href="inputm.php">Tambah data</a> </h5>
+<h5 align="left"><a class="btn btn-success" href="cetak.php" target="_blank">Cetak</a></h5>
 <form method="GET" action="index.php" style="text-align center;">
 
 <div class="form-group row">

@@ -19,9 +19,8 @@
 <center>
 
     <h5 align="left"><a class="btn btn-success" href="input.php">Tambah data</a> </h5>
-
+    <h5 align="left"><a class="btn btn-success" href="cetak.php" target="_blank">Cetak</a></h5>
     <form method="GET" action="index.php" style="text-align center;">
-
 <div class="form-group row">
 <label for="cari"  class="col-sm-1 col-form-label">Pencarian</label>
 <div class="col-sm-4">
@@ -32,13 +31,13 @@
 </div>
 </div>
 </div>
-
+    
 </form>
+
     
     <table class="table table-bordered" border="1"  style="background-color: rgba (255,255,255,0.5">
     <tr>
         <th>NO</th>
-        <th>Id </th>
         <th width="100px">nama </th>
         <th width="100px">Jenis Kelamin</th>
         <th width="100px">Asal Sekolah </th> 
@@ -46,7 +45,7 @@
         <th>Tempat Lahir </th>
         <th width="100px">Awal Magang </th>
         <th width="100px">Akhir Magang </th>
-        <th>Id Tempat</th>
+        <th>Tempat</th>
         <th> AKSI  </th>    
     </tr>
     <tr>
@@ -55,13 +54,11 @@ include "../login/ceksession.php";
 include "../config/db_config.php";
 if(isset($_GET['cari'])){
     $pencarian = $_GET['cari'];
-    $data_siswa = "select * from  tb_user where id_user like '%".$pencarian."%' or nama like '%".$pencarian."%' or jenis_kelamin like '%".$pencarian."%' or sekolah like '%".$pencarian."%'
+    $data_siswa = "select * from  tb_user user inner join tb_tempat tempat on user.id_tempat = tempat.id_tempat where id_user like '%".$pencarian."%' or nama like '%".$pencarian."%' or jenis_kelamin like '%".$pencarian."%' or sekolah like '%".$pencarian."%'
      or jurusan like '%".$pencarian."%' or tempat_lahir like '%".$pencarian."%' " ;
 }   else {
-    $data_siswa="select * from tb_user";
-}
-
-    
+    $data_siswa="select * from tb_user  user inner join tb_tempat tempat on user.id_tempat = tempat.id_tempat";
+}  
     $sql=mysqli_query($conn,$data_siswa);
     $nomor = 1;
         while($data = mysqli_fetch_array($sql)){
@@ -69,7 +66,6 @@ if(isset($_GET['cari'])){
     
 
     <td><?php echo $nomor++; ?></td>
-            <td><?php echo $data['id_user']; ?></td>
             <td><?php echo $data['nama']; ?></td>
             <td><?php echo $data['jenis_kelamin'];?></td>
             <td><?php echo $data['sekolah'];?></td>
@@ -77,12 +73,13 @@ if(isset($_GET['cari'])){
             <td><?php echo $data['tempat_lahir'];?></td>
             <td><?php echo $data['awal_magang'];?></td>
             <td><?php echo $data['akhir_magang'];?></td>
-            <td><?php echo $data['id_tempat'];?></td>
+            <td><?php echo $data['bidang'];?> - <?php echo $data['bagian'];?></td>
                
             <td>
                 <a class="btn btn-primary" href="Ubah.php?id=<?php echo $data['id_user'];?>">
                 Ubah</a> 
-                <a onclick= "return confirm('Yakin Untuk Menghapus ? ')"class="btn btn-danger" href="hapus.php?id_user=<?php echo $data['id_user'];?>">
+                <a onclick= "return confirm('Yakin Untuk Menghapus ? ')" 
+                class="btn btn-danger" href="hapus.php?id_user=<?php echo $data['id_user'];?>">
                 Hapus</a>
             </td>
 
@@ -97,6 +94,7 @@ if(isset($_GET['cari'])){
 <a class="btn btn-dark" href="../login/logout.php">KELUAR</a>
 </tr>
 </td>
+</div>
 </center>
 </td>
 <?php include '../layouts/footer.php'; ?>

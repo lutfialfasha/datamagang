@@ -20,7 +20,7 @@
   <form action="proses.php" method="post">
 
   <div class="form-group row">
-    <label for="id_tempat" class="col-sm-2 col-form-label">Id Tempat Magang</label>
+    <label for="id_tempat" class="col-sm-2 col-form-label">Tempat Magang</label>
     <div class="col-sm-5">
     <select name="id_tempat"  class="form-control">
                     
@@ -42,15 +42,6 @@
   </div>
 
   <br>
-
-  <div class="form-group row">
-    <label for="id" class="col-sm-2 col-form-label">ID</label>
-    <div class="col-sm-5">
-    <input type="number" id ="id" name="id" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
-  </div>
-  </div>
-
-<br>
 
   <div class="form-group row">
     <label for="nama" class="col-sm-2 col-form-label">NAMA</label>

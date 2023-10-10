@@ -19,12 +19,6 @@
 
 
 <form action="proses.php" method="post">
-<div class="form-group row">
-    <label for="id" class="col-sm-2 col-form-label">ID TEMPAT</label>
-    <div class="col-sm-5">
-    <input type="number" id ="id" name="id_tempat" class="form-control" placeholder="Masukan Id" aria-label="Masukan Id" id="id">
-  </div>
-  </div>
 
 <br>
 
